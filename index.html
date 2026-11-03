@@ -4,324 +4,766 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NIGHTLEAF FILM creates cinematic book trailers and strategic book marketing campaigns that bring stories to life.">
-  <title>NIGHTLEAF FILM — Your Story Deserves to Be Seen</title>
+  <meta name="description" content="NIGHTLEAF FILM creates cinematic book trailers and creative book marketing campaigns that bring stories to life.">
+  <meta name="theme-color" content="#080d09">
+
+  <title>NIGHTLEAF FILM | Your Story Deserves to Be Seen</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="ambient"></div>
-  <div class="grain"></div>
 
+<body>
+
+  <div class="ambient"></div>
+
+  <!-- NAVIGATION -->
   <header class="header">
-    <a class="logo" href="#home">
-      <span class="logo-leaf">✦</span>
-      <span>NIGHTLEAF <small>FILM</small></span>
+    <a class="logo" href="#home" aria-label="NIGHTLEAF FILM home">
+      <span class="logo-symbol">✦</span>
+      <span class="logo-name">NIGHTLEAF <small>FILM</small></span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
     <nav class="nav" id="nav">
       <a href="#home">Home</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#services">Services</a>
-      <a href="#pricing">Packages</a>
-      <a href="#about">Our story</a>
-      <a class="nav-contact" href="#contact">Let's create ↗</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">Our Story</a>
+      <a href="#testimonials">Testimonials</a>
+      <a class="nav-contact" href="#contact">Let's Create ↗</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="hero-light"></div>
-      <div class="hero-content">
-        <p class="eyebrow reveal">CINEMATIC BOOK TRAILERS · CREATIVE BOOK MARKETING</p>
 
-        <h1 class="reveal">
-          Every book has a world.<br>
-          <span class="gold-text">Let's make them see it.</span>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+      <div class="hero-background"></div>
+      <div class="starfield" aria-hidden="true"></div>
+      <div class="hero-light"></div>
+
+      <div class="hero-content">
+
+        <p class="eyebrow reveal">
+          CINEMATIC BOOK TRAILERS · CREATIVE BOOK MARKETING
+        </p>
+
+        <h1 class="hero-title reveal">
+          Every book has a world.
+          <span>Let's make them see it.</span>
         </h1>
 
         <p class="hero-description reveal">
           Your words deserve more than a page. We transform stories into
-          unforgettable visual experiences that capture attention, stir
-          curiosity and invite readers into your world.
+          unforgettable visual experiences that capture attention,
+          stir curiosity and invite readers into your world.
         </p>
 
         <div class="hero-actions reveal">
-          <a class="button button-primary" href="#portfolio">Explore our work <span>↗</span></a>
-          <a class="button button-outline" href="#contact">Promote my book</a>
+          <a href="#portfolio" class="button button-primary">
+            Explore our work <span>↗</span>
+          </a>
+
+          <a href="#contact" class="button button-outline">
+            Promote my book
+          </a>
         </div>
 
         <div class="genre-panel reveal">
           <span class="genre-label">WE BRING EVERY GENRE TO LIFE</span>
+
           <div class="genre-line">
-            <span id="genreWord">Romance</span><span class="cursor">|</span>
+            <span id="genreWord">Romance</span>
+            <span class="cursor">|</span>
           </div>
         </div>
+
       </div>
 
-      <div class="hero-caption">YOUR STORY. OUR LENS. THEIR NEXT OBSESSION.</div>
-      <div class="scroll-note">SCROLL TO DISCOVER ↓</div>
+      <div class="hero-caption">
+        YOUR STORY. OUR LENS. THEIR NEXT OBSESSION.
+      </div>
+
+      <a class="scroll-note" href="#intro">SCROLL TO DISCOVER ↓</a>
+
     </section>
 
-    <!-- INTRO -->
-    <section class="intro section-space">
+    <!-- INTRODUCTION -->
+    <section class="intro section-space" id="intro">
       <div class="container intro-grid">
+
         <div>
           <p class="eyebrow">01 — BEYOND THE PAGES</p>
-          <h2>Don't just tell them<br>about your book.<br><em>Make them feel it.</em></h2>
+
+          <h2>
+            Don't just tell them about your book.
+            <em>Make them feel it.</em>
+          </h2>
         </div>
+
         <div class="intro-copy">
           <p>
-            A powerful story deserves a powerful introduction. At NIGHTLEAF
-            FILM, we help authors turn the worlds they've imagined into
-            captivating cinematic experiences.
+            A powerful story deserves a powerful introduction.
+            At NIGHTLEAF FILM, we help authors turn the worlds
+            they've imagined into captivating cinematic experiences.
           </p>
+
           <p>
-            From gripping book trailers to thoughtful promotional campaigns,
-            we create visual moments that help your book stand out in a
-            crowded literary world.
+            From gripping book trailers to thoughtful promotional
+            campaigns, we create visual moments that help your book
+            stand out in a crowded literary world.
           </p>
-          <a class="text-link" href="#services">Discover what we do ↗</a>
+
+          <a class="text-link" href="#services">
+            Discover what we do ↗
+          </a>
         </div>
+
       </div>
     </section>
 
     <!-- PORTFOLIO -->
     <section class="portfolio section-space" id="portfolio">
+
       <div class="container">
+
         <div class="section-heading">
           <div>
             <p class="eyebrow">02 — THE SHOWCASE</p>
             <h2>Stories in <em>motion.</em></h2>
           </div>
-          <p>Every frame has a purpose. Every story deserves its moment.</p>
+
+          <p>
+            Every frame has a purpose. Every story deserves its moment.
+            Explore the worlds we bring to life.
+          </p>
         </div>
 
         <div class="portfolio-grid">
+
           <article class="video-card featured">
             <div class="video-frame">
-              <!-- Replace this placeholder with your own video -->
-              <video controls poster="images/trailer-one.jpg">
+              <video controls preload="metadata"
+                poster="images/trailer-one.jpg">
                 <source src="videos/trailer-one.mp4" type="video/mp4">
+                Your browser does not support video playback.
               </video>
               <span class="video-label">FEATURED BOOK TRAILER</span>
             </div>
+
             <div class="video-info">
-              <div><small>ROMANCE · BOOK TRAILER</small><h3>A World Between Us</h3></div>
-              <span>01 / 03</span>
+              <div>
+                <small>BOOK TRAILER · FEATURED PROJECT</small>
+                <h3>Your First Featured Story</h3>
+              </div>
+              <span>01</span>
             </div>
           </article>
 
           <article class="video-card">
             <div class="video-frame">
-              <video controls poster="images/trailer-two.jpg">
+              <video controls preload="metadata"
+                poster="images/trailer-two.jpg">
                 <source src="videos/trailer-two.mp4" type="video/mp4">
+                Your browser does not support video playback.
               </video>
               <span class="video-label">CINEMATIC STORYTELLING</span>
             </div>
+
             <div class="video-info">
-              <div><small>THRILLER · BOOK TRAILER</small><h3>Behind the Silence</h3></div>
-              <span>02 / 03</span>
+              <div>
+                <small>BOOK TRAILER</small>
+                <h3>Another World Unfolds</h3>
+              </div>
+              <span>02</span>
             </div>
           </article>
 
           <article class="video-card">
             <div class="video-frame">
-              <video controls poster="images/trailer-three.jpg">
+              <video controls preload="metadata"
+                poster="images/trailer-three.jpg">
                 <source src="videos/trailer-three.mp4" type="video/mp4">
+                Your browser does not support video playback.
               </video>
               <span class="video-label">A STORY REIMAGINED</span>
             </div>
+
             <div class="video-info">
-              <div><small>FANTASY · BOOK TRAILER</small><h3>Kingdom of Embers</h3></div>
-              <span>03 / 03</span>
+              <div>
+                <small>BOOK TRAILER</small>
+                <h3>Beyond the Pages</h3>
+              </div>
+              <span>03</span>
             </div>
           </article>
+
         </div>
-        <p class="portfolio-note">Portfolio titles and videos above are sample placeholders. Replace them with your real projects before publishing.</p>
+
+        <p class="portfolio-note">
+          Replace these sample titles, thumbnails and video files
+          with your actual completed projects.
+        </p>
+
       </div>
     </section>
 
     <!-- SERVICES -->
     <section class="services section-space" id="services">
+
       <div class="container">
+
         <p class="eyebrow">03 — WHAT WE CREATE</p>
+
         <h2>Your book. <em>Our imagination.</em></h2>
-        <p class="section-lead">More than promotion. We build experiences that give your story the attention it deserves.</p>
+
+        <p class="section-lead">
+          More than promotion. We build experiences that give your
+          story the attention it deserves.
+        </p>
 
         <div class="service-grid">
+
           <article class="service-card">
-            <span>01</span><div class="service-icon">✧</div>
+            <span class="service-number">01</span>
+            <div class="service-icon">✧</div>
             <h3>Cinematic Book Trailers</h3>
-            <p>Bring your book to life through captivating visuals, atmosphere, music and storytelling that make readers want to know more.</p>
+            <p>
+              Bring your book to life through captivating visuals,
+              atmosphere, music and storytelling that make readers
+              want to know more.
+            </p>
           </article>
+
           <article class="service-card">
-            <span>02</span><div class="service-icon">◈</div>
+            <span class="service-number">02</span>
+            <div class="service-icon">◈</div>
             <h3>Book Marketing Campaigns</h3>
-            <p>Creative promotional campaigns designed to introduce your book to potential readers and build excitement around its release.</p>
+            <p>
+              Creative promotional campaigns designed to introduce
+              your book to potential readers and build excitement.
+            </p>
           </article>
+
           <article class="service-card">
-            <span>03</span><div class="service-icon">✦</div>
+            <span class="service-number">03</span>
+            <div class="service-icon">✦</div>
             <h3>Social Media Promotion</h3>
-            <p>Eye-catching promotional visuals and content that give your book a stronger presence across social platforms.</p>
+            <p>
+              Eye-catching promotional visuals and content that
+              give your book a stronger presence across social platforms.
+            </p>
           </article>
+
           <article class="service-card">
-            <span>04</span><div class="service-icon">❖</div>
+            <span class="service-number">04</span>
+            <div class="service-icon">❖</div>
             <h3>Book Launch Promotion</h3>
-            <p>Build anticipation, announce your release and create a memorable introduction for your next literary project.</p>
+            <p>
+              Build anticipation, announce your release and create
+              a memorable introduction for your next literary project.
+            </p>
           </article>
+
           <article class="service-card">
-            <span>05</span><div class="service-icon">✧</div>
+            <span class="service-number">05</span>
+            <div class="service-icon">✧</div>
             <h3>Author Branding</h3>
-            <p>Give your author identity a consistent, distinctive visual voice that readers can recognise and remember.</p>
+            <p>
+              Give your author identity a distinctive visual voice
+              that readers can recognise and remember.
+            </p>
           </article>
+
           <article class="service-card">
-            <span>06</span><div class="service-icon">◉</div>
+            <span class="service-number">06</span>
+            <div class="service-icon">◉</div>
             <h3>Custom Creative Campaigns</h3>
-            <p>Have a different idea? We develop tailored visual concepts around your book, audience and promotional goals.</p>
+            <p>
+              Tailored visual concepts built around your book,
+              your audience and your promotional goals.
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
     <!-- GENRES -->
     <section class="genres section-space">
+
       <div class="container genres-inner">
+
         <p class="eyebrow">NO STORY LEFT BEHIND</p>
-        <h2>Whatever world you've written,<br><em>we know how to bring it alive.</em></h2>
+
+        <h2>
+          Whatever world you've written,
+          <em>we know how to bring it alive.</em>
+        </h2>
+
+        <p class="section-lead centered">
+          From breathtaking romance to gripping suspense,
+          every genre deserves its own visual identity.
+        </p>
+
         <div class="genre-cloud">
-          <span>Romance</span><span>Fantasy</span><span>Thriller</span>
-          <span>Science Fiction</span><span>Mystery</span><span>Horror</span>
-          <span>Young Adult</span><span>Historical Fiction</span>
-          <span>Adventure</span><span>Literary Fiction</span>
-          <span>Christian Fiction</span><span>Nonfiction</span>
-          <span>Poetry</span><span>Drama</span>
+          <span>Romance</span>
+          <span>Fantasy</span>
+          <span>Thriller</span>
+          <span>Science Fiction</span>
+          <span>Mystery</span>
+          <span>Horror</span>
+          <span>Young Adult</span>
+          <span>Historical Fiction</span>
+          <span>Adventure</span>
+          <span>Literary Fiction</span>
+          <span>Christian Fiction</span>
+          <span>Nonfiction</span>
+          <span>Poetry</span>
+          <span>Drama</span>
+          <span>Memoir</span>
+          <span>Crime Fiction</span>
         </div>
+
       </div>
     </section>
 
     <!-- PRICING -->
     <section class="pricing section-space" id="pricing">
+
       <div class="container">
+
         <div class="section-heading">
-          <div><p class="eyebrow">04 — INVEST IN YOUR STORY</p><h2>Choose your <em>spotlight.</em></h2></div>
-          <p>Every book has different needs. Choose a starting point, and we'll shape the right campaign together.</p>
+          <div>
+            <p class="eyebrow">04 — INVEST IN YOUR STORY</p>
+            <h2>Choose your <em>spotlight.</em></h2>
+          </div>
+
+          <p>
+            From a captivating introduction to a full cinematic
+            experience, there's a spotlight for every story.
+          </p>
         </div>
 
         <div class="price-grid">
+
           <article class="price-card">
-            <p class="price-tag">01 — THE INTRODUCTION</p>
+            <p class="price-tag">01 — THE FIRST IMPRESSION</p>
             <h3>Essential</h3>
-            <p class="price-description">For authors ready to give their book a captivating first impression.</p>
-            <ul><li>Custom book trailer concept</li><li>Trailer production</li><li>Basic promotional graphic</li><li>One revision round</li></ul>
-            <a href="#contact" class="button button-outline">Request a quote ↗</a>
+            <div class="package-duration">15 SECONDS</div>
+            <div class="package-price">175.99</div>
+
+            <p class="price-description">
+              A short, captivating introduction designed to spark
+              curiosity about your book.
+            </p>
+
+            <ul>
+              <li>15-second cinematic trailer</li>
+              <li>Creative visual concept</li>
+              <li>Music and visual effects</li>
+              <li>Book title presentation</li>
+            </ul>
+
+            <a href="#contact" class="button button-outline">
+              Choose Essential ↗
+            </a>
           </article>
-          <article class="price-card price-featured">
-            <span class="popular">MOST POPULAR</span>
-            <p class="price-tag">02 — THE CAMPAIGN</p>
-            <h3>Signature</h3>
-            <p class="price-description">For authors who want a stronger, more complete promotional presence.</p>
-            <ul><li>Everything in Essential</li><li>Expanded promotional visuals</li><li>Social media content assets</li><li>Book launch creative support</li><li>Additional revision round</li></ul>
-            <a href="#contact" class="button button-primary">Request a quote ↗</a>
-          </article>
+
           <article class="price-card">
-            <p class="price-tag">03 — THE SPOTLIGHT</p>
-            <h3>Prestige</h3>
-            <p class="price-description">For authors seeking a tailored creative campaign around their book.</p>
-            <ul><li>Premium trailer production</li><li>Custom marketing campaign</li><li>Author branding visuals</li><li>Launch promotion assets</li><li>Tailored creative direction</li></ul>
-            <a href="#contact" class="button button-outline">Request a quote ↗</a>
+            <p class="price-tag">02 — THE STORY UNFOLDS</p>
+            <h3>Signature</h3>
+            <div class="package-duration">30 SECONDS</div>
+            <div class="package-price">350.99</div>
+
+            <p class="price-description">
+              Give your story more room to breathe with a richer
+              and more engaging visual introduction.
+            </p>
+
+            <ul>
+              <li>30-second cinematic trailer</li>
+              <li>Custom creative direction</li>
+              <li>Music and visual effects</li>
+              <li>Story-inspired scenes</li>
+            </ul>
+
+            <a href="#contact" class="button button-outline">
+              Choose Signature ↗
+            </a>
           </article>
+
+          <article class="price-card price-featured">
+            <span class="popular">RECOMMENDED</span>
+
+            <p class="price-tag">03 — THE DEEPER EXPERIENCE</p>
+            <h3>Premium</h3>
+            <div class="package-duration">45 SECONDS</div>
+            <div class="package-price">600.99</div>
+
+            <p class="price-description">
+              An immersive trailer with more time to build
+              atmosphere, emotion and anticipation.
+            </p>
+
+            <ul>
+              <li>45-second cinematic trailer</li>
+              <li>Detailed visual storytelling</li>
+              <li>Atmospheric sound design</li>
+              <li>Advanced editing and effects</li>
+            </ul>
+
+            <a href="#contact" class="button button-primary">
+              Choose Premium ↗
+            </a>
+          </article>
+
+          <article class="price-card">
+            <p class="price-tag">04 — THE FULL SPOTLIGHT</p>
+            <h3>Prestige</h3>
+            <div class="package-duration">60 SECONDS</div>
+            <div class="package-price">850.99</div>
+
+            <p class="price-description">
+              A full minute of cinematic storytelling designed
+              to make your book unforgettable.
+            </p>
+
+            <ul>
+              <li>60-second cinematic trailer</li>
+              <li>Extended story presentation</li>
+              <li>Premium visual effects</li>
+              <li>Immersive sound design</li>
+              <li>Custom creative direction</li>
+            </ul>
+
+            <a href="#contact" class="button button-outline">
+              Choose Prestige ↗
+            </a>
+          </article>
+
+          <article class="price-card hollywood-card">
+            <span class="popular">ULTIMATE EXPERIENCE</span>
+
+            <p class="price-tag">05 — THE MASTERPIECE</p>
+            <h3>Hollywood Experience</h3>
+            <div class="package-duration">
+              FULL CINEMATIC EXPERIENCE
+            </div>
+            <div class="package-price">1,500.00</div>
+
+            <p class="price-description">
+              For authors who want their stories presented with
+              an ambitious, premium, Hollywood-inspired experience.
+            </p>
+
+            <ul>
+              <li>Extended cinematic production</li>
+              <li>Premium storytelling and direction</li>
+              <li>Advanced visual effects</li>
+              <li>Immersive sound design</li>
+              <li>Custom promotional visuals</li>
+              <li>Tailored creative campaign</li>
+            </ul>
+
+            <a href="#contact" class="button button-primary">
+              Choose Hollywood ↗
+            </a>
+          </article>
+
         </div>
-        <p class="pricing-note">All packages are starting frameworks, not fixed offers. Final pricing depends on project scope, deliverables and timeline.</p>
+
+        <p class="pricing-note">
+          Final project deliverables and production requirements
+          are confirmed with each author before work begins.
+        </p>
+
       </div>
     </section>
 
-    <!-- WHY US -->
+    <!-- WHY CHOOSE US -->
     <section class="promise section-space">
+
       <div class="container promise-grid">
-        <div><p class="eyebrow">05 — THE NIGHTLEAF DIFFERENCE</p><h2>Your story is not<br><em>just another project.</em></h2></div>
+
+        <div>
+          <p class="eyebrow">05 — THE NIGHTLEAF DIFFERENCE</p>
+
+          <h2>
+            Your story is not
+            <em>just another project.</em>
+          </h2>
+        </div>
+
         <div class="promise-points">
-          <div><strong>01</strong><p><b>We see the story behind the words.</b><br>We take time to understand the mood, message and world of your book.</p></div>
-          <div><strong>02</strong><p><b>Creativity with intention.</b><br>Every visual choice should serve your story and connect with its audience.</p></div>
-          <div><strong>03</strong><p><b>Your vision matters.</b><br>We work with authors to shape creative ideas that feel true to their books.</p></div>
-          <div><strong>04</strong><p><b>Made to leave an impression.</b><br>We aim to create promotional work that makes people pause, feel and remember.</p></div>
+
+          <div>
+            <strong>01</strong>
+            <p>
+              <b>We see the story behind the words.</b>
+              We take time to understand the mood, message
+              and world of your book.
+            </p>
+          </div>
+
+          <div>
+            <strong>02</strong>
+            <p>
+              <b>Creativity with intention.</b>
+              Every visual choice should serve your story
+              and connect with its audience.
+            </p>
+          </div>
+
+          <div>
+            <strong>03</strong>
+            <p>
+              <b>Your vision matters.</b>
+              We work with authors to shape creative ideas
+              that feel true to their books.
+            </p>
+          </div>
+
+          <div>
+            <strong>04</strong>
+            <p>
+              <b>Made to leave an impression.</b>
+              We aim to create promotional work that makes
+              people pause, feel and remember.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="about section-space" id="about">
+
       <div class="container about-grid">
-        <div class="about-art"><span class="about-symbol">N</span><span class="about-stamp">DREAM · CREATE · INSPIRE</span></div>
+
+        <div class="about-art">
+          <span class="about-symbol">N</span>
+          <span class="about-stamp">DREAM · CREATE · INSPIRE</span>
+        </div>
+
         <div class="about-copy">
+
           <p class="eyebrow">06 — THE STORY OF NIGHTLEAF</p>
-          <h2>Born from a love<br>of <em>stories.</em></h2>
-          <p>NIGHTLEAF FILM was born from a simple belief: stories deserve to be experienced, not just read. We believe that behind every book is a world waiting to be discovered, a feeling waiting to be shared and a reader waiting to be moved.</p>
-          <p>We created NIGHTLEAF FILM to help authors bring those worlds beyond the page through cinematic book trailers and creative book marketing. Our purpose is to turn imagination into visual experiences that invite readers closer.</p>
-          <p class="about-signature">NIGHTLEAF FILM — Dream. Create. Inspire.</p>
+
+          <h2>
+            Born from a love
+            of <em>stories.</em>
+          </h2>
+
+          <p>
+            NIGHTLEAF FILM was born from a simple belief:
+            stories deserve to be experienced, not just read.
+            We believe that behind every book is a world waiting
+            to be discovered, a feeling waiting to be shared
+            and a reader waiting to be moved.
+          </p>
+
+          <p>
+            We created NIGHTLEAF FILM to help authors bring those
+            worlds beyond the page through cinematic book trailers
+            and creative book marketing.
+          </p>
+
+          <p>
+            Our purpose is to turn imagination into visual
+            experiences that invite readers closer.
+          </p>
+
+          <p class="about-signature">
+            NIGHTLEAF FILM — Dream. Create. Inspire.
+          </p>
+
         </div>
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials section-space">
+    <section class="testimonials section-space" id="testimonials">
+
       <div class="container">
-        <p class="eyebrow">07 — WORDS THAT MATTER</p>
-        <h2>Stories are powerful.<br><em>So are the people behind them.</em></h2>
-        <div class="testimonial-box">
-          <span class="quote-mark">“</span>
-          <p>Author testimonials will appear here. Add genuine feedback from clients after completing their projects.</p>
-          <small>— YOUR FUTURE CLIENT TESTIMONIAL</small>
+
+        <p class="eyebrow">07 — WORDS FROM OUR AUTHORS</p>
+
+        <h2>
+          When stories meet
+          <em>the right spotlight.</em>
+        </h2>
+
+        <p class="testimonial-intro">
+          We don't just want to create beautiful trailers.
+          We want authors to feel the excitement of seeing
+          their stories come alive.
+        </p>
+
+        <div class="testimonial-grid">
+
+          <article class="testimonial-card">
+
+            <span class="quote-mark">“</span>
+
+            <p class="testimonial-quote">
+              Wow, this trailer is terrific! All I can say is wow.
+              I am gonna watch it again as far as posting it.
+            </p>
+
+            <div class="author-details">
+
+              <span class="author-initial">W</span>
+
+              <div>
+                <h3>Wendy Barker</h3>
+                <small>MEMOIR AUTHOR</small>
+                <p>A Stubborn Willful Girl</p>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+
+            <span class="quote-mark">“</span>
+
+            <p class="testimonial-quote">
+              It's awesome, I love it, thanks for sharing with me.
+            </p>
+
+            <div class="author-details">
+
+              <span class="author-initial">R</span>
+
+              <div>
+                <h3>Rhonda Gillian</h3>
+                <small>AUTHOR</small>
+                <p>August Rain</p>
+              </div>
+
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="contact section-space" id="contact">
+
       <div class="container contact-grid">
+
         <div>
-          <p class="eyebrow">08 — LET'S MAKE SOMETHING MEMORABLE</p>
-          <h2>Your next chapter<br>starts <em>here.</em></h2>
-          <p>You've written the story. Now let's give the world a reason to discover it. Tell us about your book, your vision and what you hope to create.</p>
+
+          <p class="eyebrow">
+            08 — LET'S MAKE SOMETHING MEMORABLE
+          </p>
+
+          <h2>
+            Your next chapter
+            starts <em>here.</em>
+          </h2>
+
+          <p class="contact-description">
+            You've written the story. Now let's give the world
+            a reason to discover it. Tell us about your book,
+            your vision and what you hope to create.
+          </p>
+
           <div class="contact-email">
             <small>FOR PROJECTS & ENQUIRIES</small>
-            <!-- Replace with your real business email -->
-            <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com ↗</a>
+            <a href="mailto:info.nightleaffilm@gmail.com">
+              info.nightleaffilm@gmail.com ↗
+            </a>
           </div>
+
         </div>
 
         <form id="contactForm" class="contact-form">
-          <label>Your name<input name="name" placeholder="Your full name" required></label>
-          <label>Your email<input name="email" type="email" placeholder="you@example.com" required></label>
-          <label>Book title<input name="book" placeholder="What's the title of your book?"></label>
-          <label>What do you need?
+
+          <label>
+            Your name
+            <input name="name" placeholder="Your full name" required>
+          </label>
+
+          <label>
+            Your email
+            <input name="email" type="email"
+              placeholder="you@example.com" required>
+          </label>
+
+          <label>
+            Book title
+            <input name="book" placeholder="What's the title of your book?">
+          </label>
+
+          <label>
+            What do you need?
+
             <select name="service">
-              <option>Book trailer</option><option>Book marketing campaign</option>
-              <option>Social media promotion</option><option>Book launch promotion</option>
-              <option>Author branding</option><option>Custom creative project</option>
+              <option>Book trailer — 15 seconds</option>
+              <option>Book trailer — 30 seconds</option>
+              <option>Book trailer — 45 seconds</option>
+              <option>Book trailer — 60 seconds</option>
+              <option>Hollywood Experience</option>
+              <option>Book marketing campaign</option>
+              <option>Social media promotion</option>
+              <option>Book launch promotion</option>
+              <option>Author branding</option>
+              <option>Custom creative project</option>
             </select>
           </label>
-          <label>Tell us about your vision<textarea name="message" rows="4" placeholder="Tell us about your book and your ideas..." required></textarea></label>
-          <button class="button button-primary" type="submit">Send your enquiry ↗</button>
+
+          <label>
+            Tell us about your vision
+
+            <textarea name="message" rows="4"
+              placeholder="Tell us about your book and your ideas..."
+              required></textarea>
+          </label>
+
+          <button class="button button-primary" type="submit">
+            Send your enquiry ↗
+          </button>
+
           <p id="formMessage" aria-live="polite"></p>
+
         </form>
+
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-row">
-      <a class="logo" href="#home">NIGHTLEAF <small>FILM</small></a>
+
+      <a class="logo" href="#home">
+        NIGHTLEAF <small>FILM</small>
+      </a>
+
       <p>YOUR STORY DESERVES TO BE SEEN.</p>
-      <span>© <span id="year"></span> NIGHTLEAF FILM. ALL RIGHTS RESERVED.</span>
+
+      <span>
+        © <span id="year"></span> NIGHTLEAF FILM.
+        ALL RIGHTS RESERVED.
+      </span>
+
     </div>
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
