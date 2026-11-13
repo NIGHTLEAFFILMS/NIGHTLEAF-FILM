@@ -1,177 +1,105 @@
 
-// =====================================
-// NIGHTLEAF FILM — WEBSITE INTERACTIONS
-// =====================================
-
-
-// 1. MOBILE NAVIGATION
+// MOBILE NAVIGATION
 
 const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("nav");
+const navigation = document.getElementById("navigation");
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.textContent = isOpen ? "✕" : "☰";
-});
-
-nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
+if (menuToggle && navigation) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
-});
 
+  navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
-// 2. LIVE BOOK GENRE TYPING EFFECT
+// ANIMATED BOOK GENRES
 
 const genres = [
-  "Romance",
   "Fantasy",
+  "Romance",
   "Mystery",
   "Thriller",
-  "Horror",
   "Science Fiction",
-  "Young Adult",
   "Historical Fiction",
-  "Adventure",
-  "Christian Fiction",
-  "Literary Fiction",
-  "Nonfiction",
-  "Poetry",
-  "Drama",
+  "Horror",
   "Memoir",
-  "Crime Fiction"
+  "Adventure",
+  "Drama",
+  "Young Adult",
+  "Literary Fiction"
 ];
 
-const genreWord = document.getElementById("genreWord");
-
+const genreText = document.getElementById("genreText");
 let genreIndex = 0;
-let letterIndex = 0;
-let deleting = false;
 
-function typeGenre() {
-  const currentGenre = genres[genreIndex];
+if (genreText) {
+  setInterval(() => {
+    genreText.style.opacity = "0";
 
-  if (!deleting) {
-
-    genreWord.textContent =
-      currentGenre.slice(0, letterIndex + 1);
-
-    letterIndex++;
-
-    if (letterIndex === currentGenre.length) {
-      deleting = true;
-      setTimeout(typeGenre, 1400);
-      return;
-    }
-
-  } else {
-
-    genreWord.textContent =
-      currentGenre.slice(0, letterIndex - 1);
-
-    letterIndex--;
-
-    if (letterIndex === 0) {
-      deleting = false;
+    setTimeout(() => {
       genreIndex = (genreIndex + 1) % genres.length;
-    }
-  }
+      genreText.textContent = genres[genreIndex];
+      genreText.style.opacity = "1";
+    }, 250);
 
-  setTimeout(typeGenre, deleting ? 45 : 105);
+  }, 2200);
 }
 
-if (genreWord) {
-  typeGenre();
-}
+// BLURRY, GLOWING, ANIMATED STARS
 
+const starsContainer = document.getElementById("stars");
 
-// 3. CINEMATIC FLOATING STARS
-
-const starfield = document.querySelector(".starfield");
-
-if (starfield) {
-
-  const starCount = 65;
-
-  for (let i = 0; i < starCount; i++) {
-
+if (starsContainer) {
+  for (let i = 0; i < 100; i++) {
     const star = document.createElement("span");
 
     star.className = "star";
 
-    const size = Math.random() * 4 + 1;
+    const size = Math.random() * 3 + 1;
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.width = size + "px";
+    star.style.height = size + "px";
 
     star.style.setProperty(
-      "--star-x",
-      `${Math.random() * 100}%`
+      "--duration",
+      (2 + Math.random() * 5) + "s"
     );
 
     star.style.setProperty(
-      "--star-y",
-      `${Math.random() * 100}%`
+      "--delay",
+      (Math.random() * 6) + "s"
     );
 
     star.style.setProperty(
-      "--star-size",
-      `${size}px`
+      "--blur",
+      (Math.random() * 2 + 0.5) + "px"
     );
 
-    star.style.setProperty(
-      "--star-blur",
-      `${Math.random() * 2.5}px`
-    );
-
-    star.style.setProperty(
-      "--star-speed",
-      `${3 + Math.random() * 6}s`
-    );
-
-    star.style.setProperty(
-      "--star-delay",
-      `${Math.random() * 8}s`
-    );
-
-    starfield.appendChild(star);
+    starsContainer.appendChild(star);
   }
 }
 
+// SCROLL REVEAL ANIMATIONS
 
-// 4. CURRENT COPYRIGHT YEAR
-
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
-
-
-// 5. SCROLL REVEAL ANIMATIONS
-
-const revealElements = document.querySelectorAll(
-  ".service-card, .video-card, .price-card, " +
-  ".promise-points > div, .about-copy, .intro-copy, " +
-  ".testimonial-card"
-);
+const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
-
   const observer = new IntersectionObserver(
-    entries => {
-
+    (entries, currentObserver) => {
       entries.forEach(entry => {
-
         if (entry.isIntersecting) {
-
           entry.target.classList.add("visible");
-
-          observer.unobserve(entry.target);
+          currentObserver.unobserve(entry.target);
         }
       });
-
     },
     {
       threshold: 0.12
@@ -179,84 +107,19 @@ if ("IntersectionObserver" in window) {
   );
 
   revealElements.forEach(element => {
-    element.classList.add("reveal-on-scroll");
     observer.observe(element);
   });
 
 } else {
-
   revealElements.forEach(element => {
     element.classList.add("visible");
   });
-
 }
 
+// COPYRIGHT YEAR
 
-// 6. CONTACT FORM
+const year = document.getElementById("year");
 
-const BUSINESS_EMAIL = "info.nightleaffilm@gmail.com";
-
-const contactForm = document.getElementById("contactForm");
-
-const formMessage = document.getElementById("formMessage");
-
-contactForm.addEventListener("submit", event => {
-
-  event.preventDefault();
-
-  const formData = new FormData(contactForm);
-
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const book = formData.get("book");
-  const service = formData.get("service");
-  const message = formData.get("message");
-
-  const subject = encodeURIComponent(
-    `NIGHTLEAF FILM Enquiry — ${book || "New Project"}`
-  );
-
-  const body = encodeURIComponent(
-    `NEW NIGHTLEAF FILM ENQUIRY
-
-Name: ${name}
-
-Email: ${email}
-
-Book Title: ${book}
-
-Requested Service: ${service}
-
-Project Details:
-${message}
-
-Sent through the NIGHTLEAF FILM website.`
-  );
-
-  formMessage.textContent =
-    "Opening your email application...";
-
-  window.location.href =
-    `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
-
-});
-
-
-// 7. VIDEO ERROR HANDLING
-
-document.querySelectorAll(".video-frame video").forEach(video => {
-
-  video.addEventListener("error", () => {
-
-    console.warn(
-      "Portfolio video could not be loaded. Check the video file path."
-    );
-
-  });
-
-});
-
-
-// =====================================
-// END OF NIGHTLEAF FILM SCRIPT
-// =====================================
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
