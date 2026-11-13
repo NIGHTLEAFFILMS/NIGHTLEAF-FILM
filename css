@@ -1,0 +1,43 @@
+
+.featured-trailer {
+  padding: 65px 35px;
+  margin-top: 35px;
+  background: linear-gradient(135deg, #19291e, #0b120d);
+  border: 1px solid rgba(190, 210, 160, 0.2);
+}
+
+.featured-trailer h3,
+.contact-emails h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  color: #f2eee2;
+  margin: 20px 0;
+}
+
+.featured-trailer p {
+  color: #b9c0b4;
+  margin-bottom: 28px;
+}
+
+.trailer-link {
+  display: inline-block;
+  padding: 15px 24px;
+  background: #c5dc78;
+  color: #10170e;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-emails a {
+  color: #c5dc78;
+  text-decoration: none;
+  font-size: 15px;
+}
