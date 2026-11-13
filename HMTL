@@ -1,0 +1,40 @@
+
+<section class="portfolio-section" id="portfolio">
+  <div class="section-heading">
+    <span class="eyebrow">OUR CREATIVE WORK</span>
+    <h2>Stories Deserve the Spotlight.</h2>
+    <p>
+      Every story has a world worth discovering.
+      Explore our cinematic storytelling.
+    </p>
+  </div>
+
+  <div class="featured-trailer">
+    <span class="eyebrow">FEATURED BOOK TRAILER</span>
+    <h3>Experience the Magic of Storytelling</h3>
+    <p>
+      Discover how imagination becomes a cinematic experience.
+    </p>
+    <a
+      href="https://youtu.be/sERqBZIrIho?si=TkjRXpt5zsE5S7G3"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="trailer-link"
+    >
+      WATCH FEATURED TRAILER ↗
+    </a>
+  </div>
+</section>
+
+<div class="contact-emails">
+  <span class="eyebrow">GET IN TOUCH</span>
+  <h3>Let's Bring Your Story to Life.</h3>
+
+  <a href="mailto:info.nightleaffilm@gmail.com">
+    info.nightleaffilm@gmail.com
+  </a>
+
+  <a href="mailto:info.marcusvance095@gmail.com">
+    info.marcusvance095@gmail.com
+  </a>
+</div>
