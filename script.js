@@ -1,4 +1,3 @@
-
 // MOBILE NAVIGATION
 
 const menuToggle = document.getElementById("menuToggle");
