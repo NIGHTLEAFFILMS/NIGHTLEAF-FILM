@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,14 @@
 </head>
 
 <body>
+  <!-- CINEMATIC WELCOME SCREEN -->
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="welcome-content">
+      <span>WELCOME TO</span>
+      <h1>NIGHTLEAF FILM</h1>
+    </div>
+  </div>
+
   <div class="background"></div>
   <div class="stars" id="stars"></div>
 
@@ -164,38 +173,13 @@
         <p>Discover the magic of turning written imagination into moving pictures.</p>
       </div>
 
-      <article class="portfolio-feature reveal">
-        <div class="portfolio-art">
-          <span class="portfolio-tag">FEATURED TRAILER</span>
-          <div class="book-symbol">N</div>
-          <span class="portfolio-caption">A NIGHTLEAF FILM EXPERIENCE</span>
-        </div>
+      <div class="portfolio-video-grid">
 
-        <div class="portfolio-copy">
-          <span class="eyebrow">FEATURED PROJECT · 01</span>
-          <h3>A Journey Beyond Words.</h3>
-          <p>
-            Step into a cinematic experience and discover how powerful
-            visuals can bring a story's atmosphere, emotion and imagination
-            to life.
-          </p>
-          <a
-            class="button button-gold"
-            href="https://youtu.be/sERqBZIrIho?si=TkjRXpt5zsE5S7G3"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WATCH THE TRAILER ↗
-          </a>
-        </div>
-      </article>
-
-      <div class="portfolio-grid">
-        <article class="portfolio-card reveal">
+        <article class="portfolio-video-card reveal">
           <div class="portfolio-video">
             <iframe
               src="https://www.youtube-nocookie.com/embed/S4vyle0Wek8"
-              title="NIGHTLEAF FILM - A Cinematic Storytelling Experience"
+              title="NIGHTLEAF FILM cinematic trailer one"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -208,11 +192,11 @@
           </div>
         </article>
 
-        <article class="portfolio-card reveal">
+        <article class="portfolio-video-card reveal">
           <div class="portfolio-video">
             <iframe
               src="https://www.youtube-nocookie.com/embed/z6zofJ2-myY"
-              title="NIGHTLEAF FILM - Cinematic Book Trailer"
+              title="NIGHTLEAF FILM cinematic trailer two"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -225,11 +209,11 @@
           </div>
         </article>
 
-        <article class="portfolio-card reveal">
+        <article class="portfolio-video-card reveal">
           <div class="portfolio-video">
             <iframe
               src="https://www.youtube-nocookie.com/embed/2M5_Febv8BY"
-              title="NIGHTLEAF FILM - Cinematic Book Trailer"
+              title="NIGHTLEAF FILM cinematic trailer three"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -241,6 +225,7 @@
             <p>A cinematic book trailer by NIGHTLEAF FILM.</p>
           </div>
         </article>
+
       </div>
     </section>
 
@@ -408,19 +393,65 @@
         </a>
 
         <div class="contact-emails">
-          <span>REACH OUR TEAM</span>
-          <a href="mailto:info.nightleaffilm@gmail.com">info.nightleaffilm@gmail.com</a>
-          <a href="mailto:info.marcusvance095@gmail.com">info.marcusvance095@gmail.com</a>
+          <span>CONNECT WITH NIGHTLEAF FILM</span>
+
+          <div class="social-icons">
+            <a href="https://www.tiktok.com/@nightleaf.film" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+              <span class="social-symbol">♪</span>
+            </a>
+
+            <a href="https://x.com/NIGHTLEAFFILM" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+              <span class="social-symbol">𝕏</span>
+            </a>
+
+            <a href="https://web.facebook.com/profile.php?id=61593019433507" target="_blank" rel="noopener noreferrer" aria-label="Facebook page one" title="Facebook page one">
+              <span class="social-symbol">f</span>
+            </a>
+
+            <a href="https://web.facebook.com/profile.php?id=61596898580310" target="_blank" rel="noopener noreferrer" aria-label="Facebook page two" title="Facebook page two">
+              <span class="social-symbol">f</span>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCmuXEZslzyZB_QgDQKiCpJQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+              <span class="social-symbol">▶</span>
+            </a>
+
+            <a href="mailto:info.nightleaffilm@gmail.com" aria-label="Email NIGHTLEAF FILM" title="Email NIGHTLEAF FILM">
+              <span class="social-symbol">✉</span>
+            </a>
+
+            <a href="mailto:info.marcusvance095@gmail.com" aria-label="Email the team" title="Email the team">
+              <span class="social-symbol">✉</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <a href="#home" class="logo">NIGHTLEAF <span>FILM</span></a>
     <p>WHERE STORIES FIND THEIR CINEMATIC VOICE.</p>
     <span>© <span id="year"></span> NIGHTLEAF FILM. ALL RIGHTS RESERVED.</span>
   </footer>
+
+  <!-- WELCOME SCREEN TIMING -->
+  <script>
+    window.addEventListener("load", function () {
+      const welcome = document.getElementById("welcomeScreen");
+
+      if (welcome) {
+        setTimeout(function () {
+          welcome.classList.add("hide");
+
+          setTimeout(function () {
+            welcome.remove();
+          }, 1100);
+        }, 5000);
+      }
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
