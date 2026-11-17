@@ -947,3 +947,216 @@ h2 {
     transform: none;
   }
 }
+
+
+
+/* ========================================
+   NIGHTLEAF FILM - CINEMATIC WELCOME
+======================================== */
+
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at center, rgba(43, 69, 39, .45), transparent 65%),
+    #050b07;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.welcome-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-content span {
+  display: block;
+  color: #d4b45f;
+  font-size: clamp(13px, 2vw, 19px);
+  letter-spacing: 8px;
+  animation: welcomeReveal 1.3s ease both;
+}
+
+.welcome-content h1 {
+  margin-top: 18px;
+  color: #f0d994;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 8vw, 85px);
+  letter-spacing: 5px;
+  animation: welcomeTitle 2s ease both;
+  text-shadow: 0 0 25px rgba(212, 180, 95, .35);
+}
+
+@keyframes welcomeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+    letter-spacing: 2px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 8px;
+  }
+}
+
+@keyframes welcomeTitle {
+  0% {
+    opacity: 0;
+    transform: scale(.85);
+    filter: blur(12px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ANIMATED HOMEPAGE HEADLINE */
+
+.hero h1 {
+  animation: heroTextReveal 1.5s ease both;
+}
+
+@keyframes heroTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ========================================
+   CINEMATIC PORTFOLIO VIDEO GRID
+======================================== */
+
+.portfolio-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.portfolio-video-card {
+  overflow: hidden;
+  background: rgba(17, 31, 19, .9);
+  border: 1px solid var(--line);
+  transition: transform .35s ease, border-color .35s ease;
+}
+
+.portfolio-video-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.portfolio-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.portfolio-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.portfolio-video-card .portfolio-info {
+  padding: 20px;
+}
+
+/* ========================================
+   SOCIAL MEDIA AND EMAIL ICONS
+======================================== */
+
+.contact-emails {
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gold-light);
+  background: rgba(21, 38, 23, .9);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.social-icons a:hover {
+  color: #10150c;
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-5px);
+}
+
+.social-symbol {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+  .portfolio-video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    gap: 12px;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .welcome-content h1 {
+    letter-spacing: 2px;
+  }
+}
