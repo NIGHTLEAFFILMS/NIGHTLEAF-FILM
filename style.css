@@ -1160,3 +1160,62 @@ h2 {
     letter-spacing: 2px;
   }
 }
+
+
+/* CINEMATIC HERO TEXT ANIMATION */
+
+.hero .eyebrow,
+.hero .hero-eyebrow {
+  animation: cinematicFade 1.2s ease both;
+}
+
+.hero h1 {
+  animation: cinematicTitle 1.8s ease both;
+  animation-delay: 0.5s;
+}
+
+.hero h1 em,
+.hero h1 span {
+  animation: goldReveal 2s ease both;
+  animation-delay: 1.3s;
+}
+
+.hero p {
+  animation: cinematicFade 1.5s ease both;
+  animation-delay: 2s;
+}
+
+@keyframes cinematicFade {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cinematicTitle {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes goldReveal {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
